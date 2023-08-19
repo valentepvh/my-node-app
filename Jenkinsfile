@@ -5,7 +5,7 @@ pipeline {
         stage ('Build Image') {
             steps {
                 script {
-                    dockerapp = docker.build("valentepvh/my-node-app:${env.BUILD_ID}", '-f Dockerfile') 
+                    dockerapp = docker.build("valentepvh/my-node-app:${env.BUILD_ID}", '-f Dockerfile .') 
                 }                
             }
         }
